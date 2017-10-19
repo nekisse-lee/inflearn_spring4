@@ -1,2 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.javalec.ex.Calculation"/>
+<fullyQualifiedTypeName name="javalec.ex.Calculator"/>
+<fullyQualifiedTypeName name="javalec.ex.MyCalculator"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="com.javalec.ex.BMICalculator"/>
+<fullyQualifiedTypeName name="com.javalec.ex.MyInfo"/>
+<fullyQualifiedTypeName name="com.javalec.ex.Pencil"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.AbstractXmlApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"/>
+<fullyQualifiedTypeName name="com.javalec.ex.ApplicationConfig"/>
+<fullyQualifiedTypeName name="org.springframework.core.io.Resource"/>
+<fullyQualifiedTypeName name="javassist.ClassPath"/>
+<fullyQualifiedTypeName name="org.springframework.core.io.ClassPathResource"/>
+<fullyQualifiedTypeName name="com.javalec.ex.AdminConnection"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.InitializingBean"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.DisposableBean"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+<fullyQualifiedTypeName name="com.javalec.ex.ApplicationConfigDev"/>
+<fullyQualifiedTypeName name="com.javalec.ex.ApplicationConfigRun"/>
+<fullyQualifiedTypeName name="com.javalec.ex.ServerInfo"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Profile"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+<fullyQualifiedTypeName name="com.javalec.ex.Student"/>
+<fullyQualifiedTypeName name="org.hibernate.jdbc.Work"/>
+<fullyQualifiedTypeName name="com.javalec.ex.Worker"/>
+<fullyQualifiedTypeName name="org.aspectj.lang.ProceedingJoinPoint"/>
+</qualifiedTypeNameHistroy>
