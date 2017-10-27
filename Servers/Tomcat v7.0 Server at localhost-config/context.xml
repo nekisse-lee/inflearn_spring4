@@ -30,4 +30,16 @@
     <Valve className="org.apache.catalina.valves.CometConnectionManagerValve" />
     -->
 
+<Resource name="jdbc/mysql"
+            auth="Container"
+            type="javax.sql.DataSource"
+            username="root"
+            password="dltjsgh"
+            driverClassName="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/nekisse_dev"
+            maxActive="50"
+            maxIdle="4"/>
+            
+            
 </Context>
+
