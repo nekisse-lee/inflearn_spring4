@@ -5,7 +5,42 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-10-26T15:54:25Z</updated>
+  <updated>2017-10-27T18:27:30Z</updated>
+  <entry>
+    <title>Reactor Bismuth-SR3 is now available</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/10/27/reactor-bismuth-sr3-is-now-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Stephane Maldini</name>
+    </author>
+    <id>tag:spring.io,2017-10-27:3075</id>
+    <updated>2017-10-27T18:27:30Z</updated>
+    <content type="html">&lt;p&gt;A shipment of fixes and goodies has arrived and it is brought to you by the new &lt;code&gt;Bismuth-SR3&lt;/code&gt; &lt;a href="https://github.com/reactor/reactor"&gt;Bill Of Material&lt;/a&gt;. This version is now used by &lt;a href="https://spring.io/blog/2017/10/24/spring-framework-5-0-1-available-now"&gt;Spring Framework 5.0.1&lt;/a&gt; ! Our site &lt;a href="http://projectreactor.io"&gt;projectreactor.io&lt;/a&gt; reflects those latest updates.&lt;/p&gt;&lt;h1&gt;&lt;a href="#reactor-core-3-1-1" class="anchor" name="reactor-core-3-1-1"&gt;&lt;/a&gt;Reactor-Core 3.1.1&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://github.com/reactor/reactor-core/releases/tag/v3.1.1.RELEASE"&gt;release notes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A quality update including more than 20 fixes and just a couple new features: Kotlin extensions for Reactor conversion from &lt;code&gt;Publisher&lt;/code&gt; and the &lt;code&gt;Flux#limitRequest&lt;/code&gt; operator alternative to &lt;code&gt;Flux#take&lt;/code&gt; with an explicit upper limit to the produced demand.&lt;/p&gt;
+&lt;p&gt;We are now working on &lt;code&gt;3.1.2.RELEASE&lt;/code&gt;. Have a look at our &lt;a href="http://github.com/reactor/reactor-core/issues"&gt;issues backlog&lt;/a&gt; for a more detailed scope.&lt;/p&gt;&lt;h1&gt;&lt;a href="#reactor-addons-3-1-2" class="anchor" name="reactor-addons-3-1-2"&gt;&lt;/a&gt;Reactor Addons 3.1.2&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://github.com/reactor/reactor-addons/releases/tag/v3.1.2.RELEASE"&gt;release notes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We now have official &lt;code&gt;Kotlin&lt;/code&gt; extensions for some of our extra operators and we will continue adding some in the future. This version highlight is the addition of &lt;a href="https://github.com/reactor/reactor-addons/blob/v3.1.2.RELEASE/reactor-extra/src/main/kotlin/reactor/retry/RetryExtensions.kt"&gt;Retry&lt;/a&gt;, &lt;a href="https://github.com/reactor/reactor-addons/blob/master/reactor-extra/src/main/kotlin/reactor/retry/RepeatExtensions.kt"&gt;Repeat&lt;/a&gt; and &lt;a href="https://github.com/reactor/reactor-addons/blob/master/reactor-extra/src/main/kotlin/reactor/math/MathFluxExtensions.kt"&gt;Mathematic extensions&lt;/a&gt;. We are quite excited by the possibilities offered with the kotlin extensions and we encourage our kotlin users to try &lt;code&gt;reactor-extra&lt;/code&gt; !&lt;/p&gt;
+&lt;p&gt;Take a glimpse at some of those convenient extensions :&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;data class User(val age: Int,val name: String)&#xD;
+&#xD;
+val userList = listOf(User(18, &amp;quot;bob&amp;quot;),  User(80, &amp;quot;grandpa&amp;quot;), User(1, &amp;quot;baby&amp;quot;))&#xD;
+&#xD;
+users.toFlux()&#xD;
+     .retryExponentialBackoff(4, Duration.ofMillis(100))&#xD;
+     .max { a, b -&amp;gt; b.age - a.age }&#xD;
+     .map { it.name }&#xD;
+     .test()&#xD;
+     .expectNext(&amp;quot;baby&amp;quot;)&#xD;
+     .verifyComplete()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We are now working on &lt;code&gt;3.1.3.RELEASE&lt;/code&gt;, and our community is invited to submit ideas for more extensions or operators. We already see a certain interest into traceability, circuit breaker and routing and will evaluate how to scope those features in the coming weeks.&lt;/p&gt;&lt;h1&gt;&lt;a href="#reactor-netty-0-7-1" class="anchor" name="reactor-netty-0-7-1"&gt;&lt;/a&gt;Reactor Netty 0.7.1&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://github.com/reactor/reactor-netty/releases/tag/v0.7.1.RELEASE"&gt;release notes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A recommended update that fixes lifecycle issues that could stall our connection pool in specific situations. Also our &lt;code&gt;HttpServer&lt;/code&gt; now correctly deals with HEAD request and matching response content-length. We &lt;a href="https://github.com/netty/netty/pull/7309"&gt;identified and fixed a regression in Netty SSL handling&lt;/a&gt;, it affects versions ranging from 4.1.14 to 4.1.16. Please monitor the next 4.1.17 Netty version if your application depends on stream large payloads over SSL.&lt;/p&gt;
+&lt;p&gt;We are now working on &lt;code&gt;0.7.2.RELEASE&lt;/code&gt; and the following &lt;code&gt;0.8.0&lt;/code&gt;. We still have on-going investigations and we are processing a wave of new feedbacks thanks to the final Spring Framework release popularity. &lt;code&gt;0.8&lt;/code&gt; aims to build on this maturity and delivers a major API quality improvement.&lt;/p&gt;&lt;h1&gt;&lt;a href="#what-happened-to-sr1-and-sr2" class="anchor" name="what-happened-to-sr1-and-sr2"&gt;&lt;/a&gt;What happened to SR1 and SR2?!&lt;/h1&gt;
+&lt;p&gt;Unfortunately we suffered twice from a POM generation issue, while these versions exist in Maven Central, they both present a defect with the definition for &lt;code&gt;reactor-extra&lt;/code&gt;. Please refrain from using the &lt;code&gt;Bismuth-SR1&lt;/code&gt; and &lt;code&gt;Bismuth-SR2&lt;/code&gt; BOMs as well as &lt;code&gt;reactor-extra:3.1.1.RELEASE&lt;/code&gt;. Fingers crossed the next version should be &lt;code&gt;Bismuth-SR4&lt;/code&gt; prior to Spring Framework &lt;code&gt;5.0.2&lt;/code&gt;.&lt;/p&gt;&lt;h1&gt;&lt;a href="#see-you-soon" class="anchor" name="see-you-soon"&gt;&lt;/a&gt;See you soon ?&lt;/h1&gt;
+&lt;p&gt;If you are interested in all the new bits and our next plans, the full team will be at &lt;a href="https://springoneplatform.io"&gt;Spring One Platform&lt;/a&gt; and a &lt;a href="https://springoneplatform.io/sessions/project-reactor-now-and-tomorrow"&gt;dedicated session is planned&lt;/a&gt;. In addition, Reactive programming with Reactor will be covered by most of the Spring tracks !&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>$ diff -q spring-data-gemfire spring-data-geode</title>
     <link rel="alternate" href="https://spring.io/blog/2017/10/26/diff-q-spring-data-gemfire-spring-data-geode" />
@@ -1242,39 +1277,6 @@ Spring IO Platform testing is a critical component, so we are still working on m
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="http://projects.spring.io/spring-session/"&gt;Project Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-session/docs/2.0.0.M5/reference/html5/"&gt;Reference&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-session"&gt;Help&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Security 5.0.0 M5 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/10/spring-security-5-0-0-m5-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Rob Winch</name>
-    </author>
-    <id>tag:spring.io,2017-10-10:3058</id>
-    <updated>2017-10-10T15:26:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the community, I&amp;#8217;m pleased to announce the release of Spring Security 5.0.0 M5. This release includes bug fixes &amp;amp; new features. The primary focus is being based off of Spring Framework 5.0.0.RELEASE, Reactor Bismuth-RELEASE, and Spring Data Kay-RELEASE.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This release also lays the foundation for Reactive and OAuth2 auto configuration in Spring Boot 2.0.0.M5&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;You can find complete details in the &lt;a href="https://github.com/spring-projects/spring-security/milestone/102?closed=1"&gt;changelog&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="get-involved"&gt;&lt;a class="anchor" href="#get-involved"&gt;&lt;/a&gt;Get Involved!&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;If you have feedback on this release, I encourage you to reach out via &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;StackOverflow&lt;/a&gt;, &lt;a href="https://github.com/spring-projects/spring-security/issues"&gt;GitHub Issues&lt;/a&gt;, or via the comments section. You can also ping me &lt;a href="https://twitter.com/rob_winch"&gt;@rob_winch&lt;/a&gt; or Joe &lt;a href="https://twitter.com/joe_grandja"&gt;@joe_grandja&lt;/a&gt; on Twitter.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Of course the best feedback comes in the form of &lt;a href="https://github.com/spring-projects/spring-security/blob/5.0.0.M5/CONTRIBUTING.md"&gt;contributions&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security/site/docs/5.0.0.M5/reference/htmlsingle/"&gt;Reference&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security/site/docs/current/guides/html5/"&gt;Guides&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 &lt;/div&gt;</content>
   </entry>
 </feed>

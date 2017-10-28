@@ -126,7 +126,12 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="SpringPjtEx_MVC" path="/spring_ex_pjt" reloadable="true" source="org.eclipse.jst.jee.server:SpringPjtEx_MVC"/><Context docBase="spinrEx_pjtMVC2" path="/spinr_ex_pjt" reloadable="true" source="org.eclipse.jst.jee.server:spinrEx_pjtMVC2"/><Context docBase="MCV_springpjt" path="/springEx" reloadable="true" source="org.eclipse.jst.jee.server:MCV_springpjt"/><Context docBase="MVC_springPjt_member" path="/springPjt" reloadable="true" source="org.eclipse.jst.jee.server:MVC_springPjt_member"/><Context docBase="spring_mvc_board" path="/spring_mvc_board" reloadable="true" source="org.eclipse.jst.jee.server:spring_mvc_board"/></Host>
+      <Context docBase="SpringPjtEx_MVC" path="/spring_ex_pjt" reloadable="true" source="org.eclipse.jst.jee.server:SpringPjtEx_MVC"/>
+      <Context docBase="spinrEx_pjtMVC2" path="/spinr_ex_pjt" reloadable="true" source="org.eclipse.jst.jee.server:spinrEx_pjtMVC2"/>
+      <Context docBase="MCV_springpjt" path="/springEx" reloadable="true" source="org.eclipse.jst.jee.server:MCV_springpjt"/>
+      <Context docBase="MVC_springPjt_member" path="/springPjt" reloadable="true" source="org.eclipse.jst.jee.server:MVC_springPjt_member"/>
+      <Context docBase="spring_mvc_board" path="/spring_mvc_board" reloadable="true" source="org.eclipse.jst.jee.server:spring_mvc_board"/>
+      <Context docBase="spring_mvc_board_JDBC" path="/spring_mvc_board_JDBC" reloadable="true" source="org.eclipse.jst.jee.server:spring_mvc_board_JDBC"/></Host>
     </Engine>
   </Service>
 </Server>
