@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="spinrEx_pjtMVC2"/>
 <aop-project name="spring_mvc_board_JDBC"/>
+<aop-project name="springMVCBoard"/>
 <aop-project name="spring_mvc_board"/>
 <aop-project name="firstEx"/>
-<aop-project name="springMVCBoard"/>
 </aop-reference-model>

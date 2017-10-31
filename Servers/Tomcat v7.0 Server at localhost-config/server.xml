@@ -131,7 +131,8 @@
       <Context docBase="MCV_springpjt" path="/springEx" reloadable="true" source="org.eclipse.jst.jee.server:MCV_springpjt"/>
       <Context docBase="MVC_springPjt_member" path="/springPjt" reloadable="true" source="org.eclipse.jst.jee.server:MVC_springPjt_member"/>
       <Context docBase="spring_mvc_board" path="/spring_mvc_board" reloadable="true" source="org.eclipse.jst.jee.server:spring_mvc_board"/>
-      <Context docBase="spring_mvc_board_JDBC" path="/spring_mvc_board_JDBC" reloadable="true" source="org.eclipse.jst.jee.server:spring_mvc_board_JDBC"/></Host>
+      <Context docBase="spring_mvc_board_JDBC" path="/spring_mvc_board_JDBC" reloadable="true" source="org.eclipse.jst.jee.server:spring_mvc_board_JDBC"/>
+      </Host>
     </Engine>
   </Service>
 </Server>
