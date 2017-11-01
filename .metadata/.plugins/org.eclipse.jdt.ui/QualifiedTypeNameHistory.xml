@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.javalec.ex.ApplicationConfigRun"/>
-<fullyQualifiedTypeName name="com.javalec.ex.ServerInfo"/>
-<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Profile"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
 <fullyQualifiedTypeName name="org.hibernate.jdbc.Work"/>
@@ -44,7 +41,6 @@
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="com.nekisse.spring_mvc_board.dao.BDao"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
 <fullyQualifiedTypeName name="com.nekisse.spring_mvc_board.util.Constant"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -60,4 +56,8 @@
 <fullyQualifiedTypeName name="org.springframework.transaction.support.DefaultTransactionDefinition"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.TransactionStatus"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.datasource.DataSourceTransactionManager"/>
+<fullyQualifiedTypeName name="com.javalec.spring_pjt_ex.dto.TicketDto"/>
+<fullyQualifiedTypeName name="com.javalec.spring_pjt_ex.com.ITicketCom"/>
+<fullyQualifiedTypeName name="com.javalec.spring_pjt_ex.HomeController"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 </qualifiedTypeNameHistroy>
