@@ -133,7 +133,7 @@
       <Context docBase="spring_mvc_board" path="/spring_mvc_board" reloadable="true" source="org.eclipse.jst.jee.server:spring_mvc_board"/>
       <Context docBase="spring_mvc_board_JDBC" path="/spring_mvc_board_JDBC" reloadable="true" source="org.eclipse.jst.jee.server:spring_mvc_board_JDBC"/>
       <Context docBase="spring_23_2_ex1_springex" path="/spring_23_2_ex1_springex" reloadable="true" source="org.eclipse.jst.jee.server:spring_23_2_ex1_springex"/>
-      <Context docBase="spring_25_1_ex1_springex" path="/spring_security_pjt" reloadable="true" source="org.eclipse.jst.jee.server:spring_25_1_ex1_springex"/></Host>
+      <Context docBase="spring_25_1_ex1_springex" path="/spring_security_pjt" reloadable="true" source="org.eclipse.jst.jee.server:spring_25_1_ex1_springex"/><Context docBase="spring_28_1_ex1_springex2_mybatis" path="/spring_mybatis_mybatis" reloadable="true" source="org.eclipse.jst.jee.server:spring_28_1_ex1_springex2_mybatis"/></Host>
     </Engine>
   </Service>
 </Server>
