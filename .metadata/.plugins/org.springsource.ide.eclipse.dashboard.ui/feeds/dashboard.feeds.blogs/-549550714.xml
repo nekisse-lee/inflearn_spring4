@@ -5,7 +5,32 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-11-01T15:46:43Z</updated>
+  <updated>2017-11-02T21:48:37Z</updated>
+  <entry>
+    <title>Spring Batch 4.0.0.RC1 is now available</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/11/02/spring-batch-4-0-0-rc1-is-now-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Michael Minella</name>
+    </author>
+    <id>tag:spring.io,2017-11-02:3085</id>
+    <updated>2017-11-02T21:48:37Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce that Spring Batch 4.0.0.RC1 is now available via Github and the Pivotal download repository. This release represents the first release candidate for the Spring Batch 4.0 release. Many thanks to all that contributed to this release.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-new" class="anchor" name="what-rsquo-s-new"&gt;&lt;/a&gt;What&amp;rsquo;s new?&lt;/h2&gt;
+&lt;p&gt;This release represents the completion of new functionality work on the 4.0.0 line. New features in Spring Batch 4 include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Updated baseline&lt;/li&gt;
+  &lt;li&gt;New builder APIs for out of the box components&lt;/li&gt;
+  &lt;li&gt;Updated, java configuration friendly, documentation&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;&lt;a href="#updated-baseline" class="anchor" name="updated-baseline"&gt;&lt;/a&gt;Updated Baseline&lt;/h2&gt;
+&lt;p&gt;Spring Batch 4.0 is taking the opportunity to reset the baseline for the project. With that in mind, we are upgrading the minimum java version to Java 8. While this should be transparent to users, it has allowed us to take advantage of new language features we have not had access to yet.&lt;/p&gt;
+&lt;p&gt;Along with the java version upgrade, we also have upgraded all the dependencies. That includes requiring Spring Framework 5 and all the pertinent versions of the portfolio that go along with it. Spring Batch 4 has done it&amp;rsquo;s best to keep the dependencies in alignment with Spring Boot 2.&lt;/p&gt;
+&lt;p&gt;Specific updates for this release is the inclusion of Spring Integration&amp;rsquo;s 5.0.0.RC1 and other minor updates.&lt;/p&gt;&lt;h2&gt;&lt;a href="#new-builder-apis" class="anchor" name="new-builder-apis"&gt;&lt;/a&gt;New Builder APIs&lt;/h2&gt;
+&lt;p&gt;Since this is the first major version release since Spring Boot was released, this is the first time we&amp;rsquo;ve been able to take a moment and look at the java configuration story holistically. While Spring Batch has had java configuration options before Spring Boot, configuring many of the out of the box components required a lot of verbose configuration. An example of this is the &lt;code&gt;FlatFileItemReader&lt;/code&gt;. Configuring this reader previously took dozens of lines of XML or java configuration and can now be configured in 10 or so lines. This release includes builders for all of the &lt;code&gt;ItemReader&lt;/code&gt; and &lt;code&gt;ItemWriter&lt;/code&gt; implementations provided by Spring Batch.&lt;/p&gt;&lt;h2&gt;&lt;a href="#updated-reference-documentation" class="anchor" name="updated-reference-documentation"&gt;&lt;/a&gt;Updated Reference Documentation&lt;/h2&gt;
+&lt;p&gt;Spring Batch&amp;rsquo;s documentation has historically been very XML focused in it&amp;rsquo;s examples of configuration. In the Spring Batch 4.0 release we have revamped the documentation from the ground up. At the top of each page in the reference documentation is a toggle for java or XML. This toggle indicates what form of configuration is presented through out the page. If java is selected, all the examples will be presented using java configuration. If XML is selected, XML based examples are displayed. We hope this will help users to better navigate the configuration options within the framework.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-next" class="anchor" name="what-rsquo-s-next"&gt;&lt;/a&gt;What&amp;rsquo;s next?&lt;/h2&gt;
+&lt;p&gt;As mentioned before, this release represents the final release with new functionality in it for the 4.0.0 release. From 4.0.0.RC1 to when we go GA we&amp;rsquo;ll be working on bugs and tweaking the documentation further to provide a better overall experience.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-do-you-think" class="anchor" name="what-do-you-think"&gt;&lt;/a&gt;What do you think?&lt;/h2&gt;
+&lt;p&gt;We look forward to your feedback on these new features in &lt;a href="https://jira.spring.io/browse/BATCH/"&gt;Jira&lt;/a&gt;, &lt;a href="https://stackoverflow.com/tags/spring-batch"&gt;StackOverflow&lt;/a&gt;, or to me directly via Twitter &lt;a href="https://twitter.com/michaelminella"&gt;@michaelminella&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://projects.spring.io/spring-batch/"&gt;Spring Batch Home&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-batch"&gt;Source on GitHub&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-batch/4.0.x/reference/html/index.html"&gt;Reference Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring Integration 5.0 Release Candidate 1 Available</title>
     <link rel="alternate" href="https://spring.io/blog/2017/11/01/spring-integration-5-0-release-candidate-1-available" />
@@ -2102,18 +2127,5 @@ After that we will switch to the version &lt;code&gt;2.0&lt;/code&gt; based on t
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tips: Bootiful JAX-RS</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/18/spring-tips-bootiful-jax-rs" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2017-09-27:3041</id>
-    <updated>2017-10-18T01:33:00Z</updated>
-    <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll look at how to integrate a Spring Boot application with JAX-RS (using the Jersey reference implementation). JAX-RS is a JCP standard for building REST applications. &lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/deB70lfUJBU" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
   </entry>
 </feed>
